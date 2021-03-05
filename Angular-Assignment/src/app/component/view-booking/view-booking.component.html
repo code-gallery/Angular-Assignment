@@ -1,0 +1,39 @@
+<section class="banner_title"><h1>My Bookings</h1></section>
+<section class="container">
+
+          <form action="" class="mt-80 w-100 search-form p-0 w-auto">
+            <table class="table table-striped mb-0 flight-detail table-responsive">
+              <thead>
+                <tr>
+                  <th>Trip:</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th>Departure</th>
+                  <th>Return</th>
+                  <th>Travellers</th>
+                  <th>Class</th>
+                  <th></th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let bookingData of bookingdetailData'>
+                 
+                  <td>{{bookingData.trip}}</td>
+                  <td>{{bookingData.flightfrom}}</td>
+                  <td>{{bookingData.flightto}}</td>
+                  <td>{{bookingData.departuredate}}</td>
+                  <td>{{bookingData.returndate}}</td>
+                  <td align="center">{{bookingData.travellers}}</td>
+                  <td>{{bookingData.flightclass}}</td>
+
+                  <td>
+                    <a [routerLink]="['/booking-detail', bookingData.id]"><button type="button">View Detail</button></a>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table> 
+          </form>
+
+    </section>

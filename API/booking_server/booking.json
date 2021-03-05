@@ -1,0 +1,154 @@
+{
+  "booking": [
+    {
+      "id": 1614730856678,
+      "flightid": 1,
+      "userid": 895,
+      "trip": "ONEWAY",
+      "flightfrom": "Goa",
+      "flightto": "New Delhi",
+      "departuredate": "2021-03-10",
+      "returndate": "2021-03-11",
+      "travellers": 3,
+      "flightclass": "Economy/Premium Economy",
+      "ticketno": "TN-1614730856678",
+      "persondetail": [
+        {
+          "personFirstName": "Tuli",
+          "personLastName": "Kumari",
+          "personMobile": "9865896589",
+          "personEmail": "tuli@gmail.com",
+          "personGender": "Female",
+          "personAge": "30",
+          "paymentDetail": "Debit/Credit Card"
+        }
+      ],
+      "paymentType": "Debit/Credit Card"
+    },
+    {
+      "id": 1614732624160,
+      "flightid": 1,
+      "userid": 895,
+      "trip": "ONEWAY",
+      "flightfrom": "Goa",
+      "flightto": "New Delhi",
+      "departuredate": "2021-03-11",
+      "returndate": "2021-03-24",
+      "travellers": 4,
+      "flightclass": "Economy/Premium Economy",
+      "ticketno": "TN-1614732624160",
+      "persondetail": [
+        {
+          "personFirstName": "sdas",
+          "personLastName": "dasd",
+          "personMobile": "787878",
+          "personEmail": "asdas@sadasd.com",
+          "personGender": "Female",
+          "personAge": "2",
+          "paymentDetail": "Net Banking"
+        }
+      ],
+      "paymentType": "Net Banking"
+    },
+    {
+      "id": 1614732693005,
+      "flightid": 1,
+      "userid": 895,
+      "trip": "ONEWAY",
+      "flightfrom": "Goa",
+      "flightto": "New Delhi",
+      "departuredate": "2021-03-11",
+      "returndate": "2021-03-24",
+      "travellers": 4,
+      "flightclass": "Economy/Premium Economy",
+      "ticketno": "TN-1614732693005",
+      "persondetail": [
+        {
+          "personFirstName": "sdas",
+          "personLastName": "dasd",
+          "personMobile": "787878",
+          "personEmail": "asdas@sadasd.com",
+          "personGender": "Female",
+          "personAge": "2",
+          "paymentDetail": "Net Banking"
+        }
+      ],
+      "paymentType": "Net Banking"
+    },
+    {
+      "id": 1614852747267,
+      "flightid": 1,
+      "userid": 895,
+      "trip": "ONEWAY",
+      "flightfrom": "Goa",
+      "flightto": "New Delhi",
+      "departuredate": "2021-03-18",
+      "returndate": "2021-03-17",
+      "travellers": 7,
+      "flightclass": "Economy/Premium Economy",
+      "ticketno": "TN-1614852747267",
+      "persondetail": [
+        {
+          "personFirstName": "asdsa",
+          "personLastName": "sad",
+          "personMobile": "3423",
+          "personEmail": "dfds@sdasa.com",
+          "personGender": "Male",
+          "personAge": "2",
+          "paymentDetail": "Debit/Credit Card"
+        }
+      ],
+      "paymentType": "Debit/Credit Card"
+    },
+    {
+      "id": 1614852867309,
+      "flightid": 1,
+      "userid": 895,
+      "trip": "ONEWAY",
+      "flightfrom": "Goa",
+      "flightto": "New Delhi",
+      "departuredate": "2021-03-02",
+      "returndate": "2021-03-03",
+      "travellers": 4,
+      "flightclass": "Economy/Premium Economy",
+      "ticketno": "TN-1614852867309",
+      "persondetail": [
+        {
+          "personFirstName": "Aarav",
+          "personLastName": "Shrivastava",
+          "personMobile": "9869856985",
+          "personEmail": "aarav@gmail.com",
+          "personGender": "Male",
+          "personAge": "18",
+          "paymentDetail": "Debit/Credit Card"
+        }
+      ],
+      "paymentType": "Debit/Credit Card"
+    },
+    {
+      "id": 1614888914922,
+      "flightid": 1,
+      "userid": 895,
+      "trip": "ONEWAY",
+      "flightfrom": "Goa",
+      "flightto": "New Delhi",
+      "departuredate": "2021-03-17",
+      "returndate": "2021-03-19",
+      "travellers": 2,
+      "flightclass": "Economy/Premium Economy",
+      "ticketno": "TN-1614888914922",
+      "persondetail": [
+        {
+          "personFirstName": "asd",
+          "personLastName": "dasda",
+          "personMobile": "3123213",
+          "personEmail": "adsd2a@asfa.com",
+          "personGender": "Male",
+          "personAge": "19",
+          "paymentDetail": "Debit/Credit Card"
+        }
+      ],
+      "paymentType": "Debit/Credit Card"
+    }
+  ]
+}

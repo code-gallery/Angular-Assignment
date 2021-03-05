@@ -1,0 +1,7 @@
+{
+    "/booking/list": "/booking",
+    "/booking/get/:id": "/booking/:id",
+    "/booking/create": "/booking",
+    "/booking/update/:id": "/booking/:id",
+    "/booking/delete/:id": "/booking/:id"
+  }

@@ -1,0 +1,253 @@
+
+     
+    <section class="container" *ngIf="searchFlag">
+      
+    
+
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form [formGroup]="searchFlightForm" (ngSubmit)="onSubmit()" class="mt-4 w-100 search-form form_bg search_flight"> 
+            <section class="trip_selection">
+              <h4>Search Flight</h4>
+             
+              <div class="form-check mr-4">
+                <input class="form-check-input" type="radio" formControlName="oneway" name="oneway" value="ONEWAY" checked>
+                <label class="form-check-label">
+                  ONEWAY
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" formControlName="oneway" name="oneway" value="ROUND TRIP">
+                <label class="form-check-label">
+                  ROUND TRIP
+                </label>
+              </div>
+              
+            </section>
+            <section class="row">
+              <div class="col-md-6">
+                <label class="mt-3">From</label>
+                <input type="text" formControlName="flightfrom" placeholder="" [ngClass]="{ 'is-invalid': submitted && bookf.flightfrom.errors }">
+                <div *ngIf="submitted && bookf.flightfrom.errors" class="invalid-feedback">
+                  <div *ngIf="bookf.flightfrom.errors.required">From is required</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                 <label class="mt-3">To</label>
+                 <input type="text" formControlName="flightto" placeholder="" [ngClass]="{ 'is-invalid': submitted && bookf.flightto.errors }">
+                 <div *ngIf="submitted && bookf.flightto.errors" class="invalid-feedback">
+                  <div *ngIf="bookf.flightto.errors.required">To is required</div>
+                </div>
+              </div>
+            </section>
+            <section class="row">
+              <div class="col-md-6">
+                 <label class="mt-3">DEPARTURE</label>
+                 <input type="date" formControlName="departure" placeholder="" [ngClass]="{ 'is-invalid': submitted && bookf.departure.errors }">
+                 <div *ngIf="submitted && bookf.departure.errors" class="invalid-feedback">
+                  <div *ngIf="bookf.departure.errors.required">Departure is required</div>
+                 </div>
+                </div>
+              <div class="col-md-6">
+                <label class="mt-3">RETURN</label>
+                <input type="date" formControlName="return" placeholder="" [ngClass]="{ 'is-invalid': submitted && bookf.return.errors }">
+                <div *ngIf="submitted && bookf.return.errors" class="invalid-feedback">
+                  <div *ngIf="bookf.return.errors.required">Return is required</div>
+                </div>
+              </div>
+            </section>
+            <section class="row">
+              <div class="col-md-6">
+                 <label class="mt-3">TRAVELLERS</label>
+                 <select formControlName="travellers" [ngClass]="{ 'is-invalid': submitted && bookf.travellers.errors }">
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3</option>
+                   <option>4</option>
+                   <option>5</option>
+                   <option>6</option>
+                   <option>7</option>
+                   <option>8</option>
+                   <option>9</option>
+                   <option>10</option>
+                 </select>
+                 <div *ngIf="submitted && bookf.travellers.errors" class="invalid-feedback">
+                  <div *ngIf="bookf.travellers.errors.required">Travellers is required</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="mt-3">CLASS</label>
+                <div class="form-check mr-4">
+                  <input class="form-check-input" type="radio" formControlName="flightclass" name="flightclass" value="Economy/Premium Economy" checked>
+                  <label class="form-check-label" for="flightclass">
+                    Economy/Premium Economy
+                  </label>
+                </div>
+                <div class="form-check mr-4">
+                  <input class="form-check-input" type="radio" formControlName="flightclass" name="flightclass" value="Premium Economy">
+                  <label class="form-check-label" for="flightclass">
+                    Premium Economy
+                  </label>
+                </div>
+                <div class="form-check mr-4">
+                  <input class="form-check-input" type="radio" formControlName="flightclass" name="flightclass" value="Business">
+                  <label class="form-check-label" for="flightclass">
+                    Business
+                  </label>
+                </div>
+              </div>
+            </section>
+            <button type="submit" class="mt-4">SEARCH</button>   
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    
+     
+    <section class="container" *ngIf="flightDetailFlag">
+      <h1 class="welcome mb-4">Choose Flight</h1>
+      <!-- <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['normalOrder']">Normal Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['premiumOrder']">Buzz Booking</a>
+        </li>
+      </ul>
+    
+      <router-outlet></router-outlet> -->
+      
+      <form action="flight_detail.html" class="mt-4 w-100 search-form p-0"> 
+            
+        <div class="table-responsive">
+         <table *ngIf="flightFoundFlag" class="table table-striped mb-0 flight-detail">
+              <thead>
+                <tr>
+                  <th>Company:</th>
+                  <th>Departure</th>
+                  <th>Duration</th>
+                  <th>Arrival</th>
+                  <th>Price</th>
+                  <th>Discount</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let fligthData of getFlightData'>
+                  <td><img src="assets/images/{{fligthData.flightImg}}" alt="" title="" width="34" /> {{fligthData.company}}</td>
+                  <td>{{fligthData.departureTime}}<br />{{fligthData.origin}}</td>
+                  <td>{{fligthData.duration}}</td>
+                  <td>{{fligthData.arrivalTime}}<br />{{fligthData.destination}}</td>
+                  <td>{{fligthData.price}}</td>
+                  <td>{{fligthData.discount}}</td>
+                  <td>
+                    <a (click)="searchFlight(2,fligthData.id)"><button type="button">Book Now</button></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table> 
+          </div>
+            <h4 *ngIf="!flightFoundFlag" class="text-center">No Flights Found!</h4>
+          </form>   
+    </section>
+
+
+    <section class="container" *ngIf="checkoutFlag">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+        <form [formGroup]="checkoutForm" class="mt-80 w-100 search-form" (ngSubmit)="onCheckoutSubmit()">
+            <h2>Fill Personal Detail:</h2>
+            
+              <div *ngFor="let n of numSequence(bookingmodel.travellers); 
+              let row = index;">
+                <h5 class="mb-3 mt-4"><b>Passenger {{row+1}}</b></h5>
+                <section class="row">
+                  <div class="col-md-6">
+                    <label class="mt-3">First Name</label>
+                    <input type="text" formControlName="personFirstName" placeholder="" [ngClass]="{ 'is-invalid': submittedCheckout && cf.personFirstName.errors }">
+                    <div *ngIf="submittedCheckout && cf.personFirstName.errors" class="invalid-feedback">
+                      <div *ngIf="cf.personFirstName.errors.required">First Name is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="mt-3">Last Name</label>
+                    <input type="text" formControlName="personLastName" id="" placeholder="" [ngClass]="{ 'is-invalid': submittedCheckout && cf.personLastName.errors }">
+                    <div *ngIf="submittedCheckout && cf.personLastName.errors" class="invalid-feedback">
+                      <div *ngIf="cf.personLastName.errors.required">Last Name is required</div>
+                    </div>
+                  </div>
+                </section>
+                <section class="row">
+                  <div class="col-md-6">
+                    <label class="mt-3">Mobile No</label>
+                    <input type="phone" formControlName="personMobile"  [ngClass]="{ 'is-invalid': submittedCheckout && cf.personMobile.errors }">
+                    <div *ngIf="submittedCheckout && cf.personMobile.errors" class="invalid-feedback">
+                      <div *ngIf="cf.personMobile.errors.required">Mobile is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="mt-3">Email</label>
+                    <input type="email" formControlName="personEmail" [ngClass]="{ 'is-invalid': submittedCheckout && cf.personEmail.errors }">
+                    <div *ngIf="submittedCheckout && cf.personEmail.errors" class="invalid-feedback">
+                      <div *ngIf="cf.personEmail.errors.required">Email is required</div>
+                    </div>
+                  </div>
+                </section>
+
+              
+                <section class="row trip_selection ">
+                  <div class="col-md-6">
+                    <label class="mt-3 pb-2">Gender</label>
+                    <select  formControlName="personGender" [ngClass]="{ 'is-invalid': submittedCheckout && cf.personGender.errors }">
+                      <option value="Male">
+                        Male
+                      </option>
+                      <option value="Female">
+                        Female
+                      </option>
+                    </select>
+        
+                    <div *ngIf="submittedCheckout && cf.personGender.errors" class="invalid-feedback">
+                      <div *ngIf="cf.personGender.errors.required">Gender is required</div>
+                    </div>
+                 </div>
+                 <div class="col-md-6">
+                   <label class="mt-4">Age</label>
+                   <select  formControlName="personAge" [ngClass]="{ 'is-invalid': submittedCheckout && cf.personAge.errors }">
+                    <option *ngFor="let n of numSequence(100); 
+                    let i = index;" value="{{i+1}}">{{i+1}}</option>
+                   </select>
+                   <div *ngIf="submittedCheckout && cf.personAge.errors" class="invalid-feedback">
+                    <div *ngIf="cf.personAge.errors.required">Age is required</div>
+                  </div>
+                 </div>
+                </section>
+
+              </div>
+              
+                <h2 class="mt-4 pt-4">Payment Detail:</h2>
+                <section class="trip_selection mt-4">
+                  <select  formControlName="paymentDetail" [ngClass]="{ 'is-invalid': submittedCheckout && cf.paymentDetail.errors }">
+                    <option value="Debit/Credit Card">
+                      Debit/Credit Card
+                    </option>
+                    <option value="Net Banking">
+                      Net Banking
+                    </option>
+                  </select>
+                  <div *ngIf="submittedCheckout && cf.paymentDetail.errors" class="invalid-feedback">
+                    <div *ngIf="cf.paymentDetail.errors.required">Payment detail is required</div>
+                  </div>
+    
+                  
+                </section>
+                <button type="submit" class=" mt-4">Continue</button>
+
+              
+          </form>
+        </div>
+      </div>
+    </section>
+

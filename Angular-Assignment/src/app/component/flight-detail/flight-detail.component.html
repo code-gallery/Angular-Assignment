@@ -1,0 +1,31 @@
+<section class="banner_title"><h1>Search All Flights</h1></section>
+    <section class="container">
+
+          <form action="" class="mt-80 w-100 search-form p-0">
+            <div class="table-responsive">
+              <table class="table table-striped mb-0 w-100">
+                <thead>
+                  <tr>
+                    <th>Flight Name:</th>
+                    <th>Departure</th>
+                    <th>Duration</th>
+                    <th>Arrival</th>
+                    <th>Price</th>
+                    <th>Discount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor='let fligthData of flightdetailData'>
+                    <td><img src="assets/images/{{fligthData.flightImg}}" alt="" title="" width="34" /> {{fligthData.company}}</td>
+                    <td>{{fligthData.departureTime}}<br />{{fligthData.origin}}</td>
+                    <td>{{fligthData.duration}}</td>
+                    <td>{{fligthData.arrivalTime}}<br />{{fligthData.destination}}</td>
+                    <td>{{fligthData.price}}</td>
+                    <td>{{fligthData.discount}}</td>
+                  </tr>
+                </tbody>
+              </table> 
+             </div>
+          </form>
+
+    </section>

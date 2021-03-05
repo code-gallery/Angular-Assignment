@@ -1,0 +1,66 @@
+<form ngForm>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"
+             required
+             [(ngModel)]="model.name" name="name">
+    </div>
+    
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number"  class="form-control" id="age"
+             [(ngModel)]="model.age" name="age">
+    </div>
+
+    <button *ngIf="!editId" type="submit" class="btn btn-primary" (click)="createCustomer()">Submit</button>
+    <button *ngIf="editId" type="submit" class="btn btn-primary" (click)="editCustomer()">Edit</button>
+    <button *ngIf="editId" type="submit" class="btn btn-primary" (click)="resetCustomer()">Clear</button>
+
+</form> 
+
+<div style="padding-bottom: 185px;">
+    <ol>
+        <li appHeightlight *ngFor='let cust of custArray'>
+           {{cust.name}} <b>||</b> {{cust.age}} 
+           <button (click)="editCustomer(cust.customer_no)">Edit</button> 
+           <button (click)="deleteCustomer(cust.customer_no)">Delete</button>
+         </li>
+     </ol>
+  </div>
+
+
+  <!-- <form ngForm>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="first_name"
+             required
+             [(ngModel)]="model.first_name" name="first_name">
+      <input type="text" class="form-control" id="last_name"
+             required
+             [(ngModel)]="model.last_name" name="last_name">
+      <input type="text" class="form-control" id="email"
+             required
+             [(ngModel)]="model.email" name="email">
+    </div>
+    
+   
+    <button *ngIf="!editId" type="submit" class="btn btn-primary" (click)="createUser()">Submit</button>
+    -->
+   
+    <!-- <button *ngIf="editId" type="submit" class="btn btn-primary" (click)="editCustomer()">Edit</button>
+    <button *ngIf="editId" type="submit" class="btn btn-primary" (click)="resetCustomer()">Clear</button> -->
+
+<!-- </form>
+
+
+  <button type="submit"(click)="getUser()" class="btn btn-danger">Display Data</button> 
+
+  <div>
+    <ol>
+        <li appHeightlight color="yellow" *ngFor='let user of getData'>
+           {{user.first_name}} {{user.last_name}} <b>||</b> {{user.email}} 
+         </li>
+     </ol>
+  </div> -->
+
+  

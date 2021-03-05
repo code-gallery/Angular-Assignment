@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 895,
+      "first_name": "Tuli",
+      "last_name": "Agrawal",
+      "email": "tuli@gmail.com",
+      "password": "123456",
+      "gender": "Female",
+      "phone_no": "9869856988",
+      "address": "New Delhi"
+    },
+    {
+      "id": 889,
+      "first_name": "Puja",
+      "last_name": "Kumari",
+      "email": "tuli@gmail.com",
+      "password": "123456",
+      "gender": "Female",
+      "phone_no": "8859856988",
+      "address": "Delhi"
+    },
+    {
+      "id": 889,
+      "first_name": "Priya",
+      "last_name": "Kumari",
+      "email": "priya@gmail.com",
+      "password": "123456",
+      "gender": "Female",
+      "phone_no": "9869856985",
+      "address": "Uttar Pradesh"
+    }
+  ]
+}

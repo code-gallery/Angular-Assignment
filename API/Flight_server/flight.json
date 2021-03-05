@@ -1,0 +1,74 @@
+{
+  "flights": [
+    {
+        "id": 1,
+        "company": "Air India",
+        "duration": "3h 10m",
+	"departureDate": "2021-03-05",
+        "arrivalDate": "2021-03-05",
+        "departureTime": "08:00",
+        "arrivalTime": "11:10",
+        "origin": "Goa",
+        "destination": "New Delhi",
+        "price": "1000",
+	"discount": "10%",
+        "flightImg": "flighticon1.jpg"
+    },
+    {
+        "id": 2,
+        "company": "IndiGo",
+        "duration": "4h 5m",
+	"departureDate": "2021-03-05",
+        "arrivalDate": "2021-03-05",
+        "departureTime": "09:00",
+        "arrivalTime": "13:5",
+        "origin": "Goa",
+        "destination": "New Delhi",
+        "price": "1200",
+	"discount": "15%",
+        "flightImg": "flighticon2.jpg"
+    },
+    {
+        "id": 3,
+        "company": "SpiceJet",
+        "duration": "4h 10m",
+	"departureDate": "2021-03-05",
+        "arrivalDate": "2021-03-05",
+        "departureTime": "10:00",
+        "arrivalTime": "14:10",
+        "origin": "Bengaluru",
+        "destination": "New Delhi",
+        "price": "2000",
+	"discount": "20%",
+        "flightImg": "flighticon3.jpg"
+    },
+    {
+        "id": 4,
+        "company": "GoAir",
+        "duration": "1h 10m",
+	"departureDate": "2021-03-05",
+        "arrivalDate": "2021-03-05",
+        "departureTime": "08:00",
+        "arrivalTime": "9:10",
+        "origin": "Goa",
+        "destination": "New Delhi",
+        "price": "1500",
+	"discount": "25%",
+        "flightImg": "flighticon4.jpg"
+    },
+    {
+        "id": 5,
+        "company": "AirAsia",
+        "duration": "3h 10m",
+	"departureDate": "2021-03-05",
+        "arrivalDate": "2021-03-05",
+        "departureTime": "08:00",
+        "arrivalTime": "11:10",
+        "origin": "Bengaluru",
+        "destination": "New Delhi",
+        "price": "2600",
+	"discount": "10%",
+        "flightImg": "flighticon5.jpg"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+    "/flight/list": "/flight",
+    "/flight/get/:id": "/flight/:id",
+    "/flight/create": "/flight",
+    "/flight/update/:id": "/flight/:id",
+    "/flight/delete/:id": "/flight/:id"
+  }
